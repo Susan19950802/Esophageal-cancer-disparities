@@ -1,0 +1,9 @@
+library(MASS)
+#negative binomial regression models
+m<- glm.nb(death_num.age ~ gdp2015+Agegroup+offset(log(popu.age)),data = da)
+m<- glm.nb(death_num.age ~ edu_all_2010+Agegroup+offset(log(popu.age)),
+           data = da)
+m<- glm.nb(death_num.age ~ urban_rural2015+Agegroup+offset(log(popu.age)),
+           data = da)     
+m<- glm.nb(death_num.age ~ urban_rural2015+edu_all_2010+gdp2015+Agegroup+offset(log(popu.age)),
+           data = da)
